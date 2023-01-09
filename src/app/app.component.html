@@ -1,3 +1,14 @@
+<!--- Uso de *ngFor Objs  CLASE 13  --->
+<h1>*ngFor Objs/arrays</h1>
+<div>
+  <div *ngFor="let product of products">
+    <img width="250" [src]="product.image" [alt]="product.name">
+    <p> Nombre: {{product.name}}</p>
+    <p>Precio: ${{product.price}}.00</p>
+  </div>
+</div>
+<hr/>
+
 <!--- Uso de *ngFor  CLASE 12  --->
 <h1>*ngFor</h1>
 <input type="text" required [(ngModel)]="newName">

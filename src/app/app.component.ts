@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Product } from './product.model'
 
 @Component({
   selector: 'app-root',
@@ -21,6 +22,8 @@ export class AppComponent {
 
   newName = '';
 
+  newUtil = '';
+
   utilesEscolares: string[] = [
       'Dos cuadernos de cuadrícula grande de 100 hojas',
       'Un cuaderno de rayas de 100 hojas',
@@ -30,7 +33,39 @@ export class AppComponent {
       'Pegamento'
   ];
 
-  newUtil = '';
+  products: Product[] = [
+    {
+      name: 'El mejor juguete',
+      price: 565,
+      image: './assets/images/toy.jpg',
+      category: 'all',
+    },
+    {
+      name: 'Bicicleta casi nueva',
+      price: 356,
+      image: './assets/images/bike.jpg'
+    },
+    {
+      name: 'Colleción de albumenes',
+      price: 34,
+      image: './assets/images/album.jpg'
+    },
+    {
+      name: 'Mis libros',
+      price: 23,
+      image: './assets/images/books.jpg'
+    },
+    {
+      name: 'Casa para perro',
+      price: 34,
+      image: './assets/images/house.jpg'
+    },
+    {
+      name: 'Gafas',
+      price: 3434,
+      image: './assets/images/glasses.jpg'
+    }
+  ]
 
   toggleButton() {
     this.btnDisabled = !this.btnDisabled;
