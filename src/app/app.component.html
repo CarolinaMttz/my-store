@@ -1,4 +1,14 @@
-<!--- Property Binding  CLASE 10  --->
+<!--- Uso de *ngIf  CLASE 11  --->
+<h1>Mi contenido</h1>
+<input type="text" required [(ngModel)]="person.name" ><br>
+<p *ngIf="person.name === 'Nicolas' ">Soy Nicolás</p>
+<p *ngIf="person.name === 'carolina' && person.age === 18; else elseBlock">Soy Carolina</p>
+<ng-template #elseBlock >
+  <p>Bloque de else</p>
+</ng-template>
+<hr/>
+
+<!--- Data binding con ngModel  CLASE 10  --->
 <h1>Ng Model</h1>
 <p>Nombre {{ person.name }} </p>
 <input type="text" required #nameInput="ngModel" [(ngModel)]="person.name" ><br>
@@ -8,7 +18,7 @@
 <p>Valid: {{ ageInput.valid }}</p>
 <hr/>
 
-<!--- Property Binding  CLASE 8-9  --->
+<!--- Event Binding  CLASE 8-9  --->
 <h1>Eventos</h1>
 <button [disabled]="btnDisabled">Enviar</button>
 <button (click)="toggleButton()" >Toggle Button</button>
