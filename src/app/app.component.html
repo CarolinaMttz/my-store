@@ -1,3 +1,27 @@
+<!--- Uso de *ngFor  CLASE 12  --->
+<h1>Mi contenido</h1>
+<input type="text" required [(ngModel)]="newName">
+<button (click)="addName()">Add name</button>
+<ul>
+  <span *ngIf="names.length === 0">Lista vacia. No hay nombres</span>
+  <li *ngFor="let name of names; index as i">
+    {{i+1}}._ {{name}}
+    <button (click)="deleteName(i)">Delete!</button>
+  </li>
+</ul>
+
+<h6>Mi lista de útiles escolares</h6>
+<input type="text" required [(ngModel)]="newUtil">
+<button (click)="addUtil()">Agregar útil</button>
+<ul>
+  <span *ngIf="utilesEscolares.length === 0">Lista vacía</span>
+  <li *ngFor="let util of utilesEscolares; index as i">
+    {{i+1}}._ {{util}}
+    <button (click)="deleteUtil(i)">Delete!</button>
+  </li>
+</ul>
+<hr/>
+
 <!--- Uso de *ngIf  CLASE 11  --->
 <h1>Mi contenido</h1>
 <input type="text" required [(ngModel)]="person.name" ><br>

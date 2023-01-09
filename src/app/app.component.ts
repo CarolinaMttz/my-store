@@ -17,6 +17,21 @@ export class AppComponent {
     avatar: 'https://www.lavanguardia.com/files/og_thumbnail/uploads/2017/12/08/5fa3d8e24f841.jpeg'
   }
 
+  names: string[] = ['Frank', 'Heydi', 'Benito'];
+
+  newName = '';
+
+  utilesEscolares: string[] = [
+      'Dos cuadernos de cuadrícula grande de 100 hojas',
+      'Un cuaderno de rayas de 100 hojas',
+      'Un lápiz del número 2, un bicolor y una goma para borrar',
+      'Un sacapuntas y unas tijeras de punta roma',
+      'Lápices de colores de madera o pinturas de cera',
+      'Pegamento'
+  ];
+
+  newUtil = '';
+
   toggleButton() {
     this.btnDisabled = !this.btnDisabled;
   }
@@ -34,5 +49,27 @@ export class AppComponent {
     const element    = event.target as HTMLInputElement;
     this.person.name = element.value;
   }
+
+  addName(){
+    this.names.push(this.newName);
+    this.newName = '';
+  }
+
+  deleteName(index: number){
+    this.names.splice( index, 1 ); //(posición, cuantos elementos quiero eliminar a partir de esa posición)
+  }
+
+  addUtil(){
+    this.utilesEscolares.push(this.newUtil);
+    this.newUtil = '';
+  }
+
+  deleteUtil(index: number){
+    this.utilesEscolares.splice( index, 1 ); //(posición, cuantos elementos quiero eliminar a partir de esa posición)
+  }
+
+
+
+
 
 }
