@@ -1,5 +1,5 @@
 <!--- Uso de *ngFor  CLASE 12  --->
-<h1>Mi contenido</h1>
+<h1>*ngFor</h1>
 <input type="text" required [(ngModel)]="newName">
 <button (click)="addName()">Add name</button>
 <ul>
@@ -23,7 +23,7 @@
 <hr/>
 
 <!--- Uso de *ngIf  CLASE 11  --->
-<h1>Mi contenido</h1>
+<h1>*ngIf</h1>
 <input type="text" required [(ngModel)]="person.name" ><br>
 <p *ngIf="person.name === 'Nicolas' ">Soy Nicolás</p>
 <p *ngIf="person.name === 'carolina' && person.age === 18; else elseBlock">Soy Carolina</p>
