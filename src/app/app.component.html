@@ -1,9 +1,21 @@
-<!--- Property Binding  CLASE 7  --->
+<!--- Property Binding  CLASE 8  --->
 <h1>Eventos</h1>
 <button [disabled]="btnDisabled">Enviar</button>
 <button (click)="toggleButton()" >Toggle Button</button>
 <p>Edad {{ person.age }} </p>
 <button (click)="increaseAge()" >Age ++</button>
+
+<div class="box" (scroll)="onScroll($event)">
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo voluptatibus sed explicabo aspernatur aliquam dolorem doloribus maiores officia tenetur quae, inventore animi modi deserunt voluptatum quisquam nobis, esse molestiae nulla.
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo voluptatibus sed explicabo aspernatur aliquam dolorem doloribus maiores officia tenetur quae, inventore animi modi deserunt voluptatum quisquam nobis, esse molestiae nulla.
+  </p>
+</div>
+
+<div>
+  <p>Nombre {{ person.name }} </p>
+<input type="text" [value]="person.name" (keyup)="changeName($event)"><br>
+</div>
 <hr/>
 
 <!--- Property Binding  CLASE 7  --->
