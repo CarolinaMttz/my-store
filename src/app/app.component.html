@@ -1,3 +1,14 @@
+<!--- Estilos a la lista de productos  CLASE 16  --->
+<h1>*ngFor Objs/arrays</h1>
+<div class="products--grid">
+  <div *ngFor="let product of products">
+    <img [src]="product.image" [alt]="product.name">
+    <p> Nombre: {{product.name}}</p>
+    <p>Precio: ${{product.price}}.00</p>
+  </div>
+</div>
+<hr/>
+
 <!--- Uso de *ngSwitch  CLASE 14  --->
 <h1>ngSwitch</h1>
 <input type="text" required [(ngModel)]="person.name" ><br>
@@ -116,4 +127,4 @@
 <h2>{{ 'Hola mundo'.repeat(5) }}</h2>
 <p> 3+3 = {{ 3 + 3 }}</p>
 <h3> Hola soy {{ name }} y tengo {{ age }} </h3>
-<img src={{img}} alt="Imagen" >
+<img width="200" src={{img}} alt="Imagen" >
