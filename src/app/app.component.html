@@ -1,5 +1,65 @@
-<!--- Class and style  CLASE 17  --->
-<h1>NgClass & Ngstyle</h1>
+<!--- NCrear un formulario  CLASE 19  --->
+<div class="divLogin  ">
+  <h1>Login</h1>
+  <form (ngSubmit)="onRegister()" #myFormLogin="ngForm">
+    <div class="input-group">
+      <label for="emailLogin">Email</label>
+      <input type="email" required name="emailLogin" id="emailLogin" #input_emailLogin="ngModel" [(ngModel)]="registerLogin.email">
+      <p class="mensage-error" [class.invalido]="input_emailLogin.invalid">
+        Campo requerido
+      </p>
+    </div>
+
+    <div class="input-group">
+      <label for="passwordLogin">Password</label>
+      <input type="passwordLogin"  required name="passwordLogin" id="passwordLogin" #input_passLogin="ngModel" [(ngModel)]="registerLogin.password">
+      <p class="mensage-error" [class.invalido]="input_passLogin.invalid">
+        Campo requerido
+      </p>
+    </div>
+
+    <button class="btnBtn" [disabled]="myFormLogin.invalid" type="submit">Log in</button><br>
+    <button class="btnCancel" type="button">Sign up</button>
+  </form>
+</div>
+<hr/>
+
+
+<div class="divFrm">
+  <h1>Formulario</h1>
+  <form (ngSubmit)="onRegister()" #myForm="ngForm">
+    <div class="input-group">
+      <label for="name">Nombre</label>
+      <input type="text" required name="name" id="name" #input_name="ngModel" [(ngModel)]="register.name">
+      <p class="mensage-error" [class.invalido]="input_name.invalid">
+        Campo requerido
+      </p>
+    </div>
+
+    <div class="input-group">
+      <label for="email">Email</label>
+      <input type="email" required name="email" id="email" #input_email="ngModel" [(ngModel)]="register.email">
+      <p class="mensage-error" [class.invalido]="input_email.invalid">
+        Campo requerido
+      </p>
+    </div>
+
+    <div class="input-group">
+      <label for="password">Password</label>
+      <input type="password"  required name="password" id="password" #input_pass="ngModel" [(ngModel)]="register.password">
+      <p class="mensage-error" [class.invalido]="input_pass.invalid">
+        Campo requerido
+      </p>
+    </div>
+
+    <button class="btnBtn" [disabled]="myForm.invalid" type="submit">Registrar</button>
+    <button class="btnCancel" type="button">Acción</button>
+  </form>
+</div>
+<hr/>
+
+<!--- NgClass and NgStyle  CLASE 18  --->
+<h1>NgClass & NgStyle</h1>
 <input type="text" required #nameInput4="ngModel" [(ngModel)]="person.name" ><br>
 <hr class="inline-error"
     [ngClass]="{

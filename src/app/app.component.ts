@@ -31,6 +31,17 @@ export class AppComponent {
     background: 'red'
   };
 
+  register = {
+    name: '',
+    email: '',
+    password: ''
+  }
+
+  registerLogin = {
+    email: '',
+    password: ''
+  }
+
   utilesEscolares: string[] = [
       'Dos cuadernos de cuadrícula grande de 100 hojas',
       'Un cuaderno de rayas de 100 hojas',
@@ -110,7 +121,9 @@ export class AppComponent {
     this.utilesEscolares.splice( index, 1 ); //(posición, cuantos elementos quiero eliminar a partir de esa posición)
   }
 
-
+  onRegister(){
+    console.log( this.register );
+  }
 
 
 
