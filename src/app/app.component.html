@@ -1,3 +1,22 @@
+<!--- Class and style  CLASE 17  --->
+<h1>Class and style</h1>
+<input type="text" required #nameInput2="ngModel" [(ngModel)]="person.name" ><br>
+<p class="message-error" [class.invalido]="nameInput2.invalid">
+  El campo es requerido
+</p>
+<label>Nombre:</label>
+<input type="text" required #nameInput3="ngModel" [(ngModel)]="person.name" ><br>
+<p [style.font-style]="nameInput3.invalid ? 'Italic' : 'normal' ">Texto texto texto</p>
+<div class="styles">
+  <div>
+    <input type="text" [(ngModel)]="widthImg">
+  </div>
+  <div>
+    <img [style.width.%]="widthImg" [src]="person.avatar">
+  </div>
+</div>
+<hr/>
+
 <!--- Estilos a la lista de productos  CLASE 16  --->
 <h1>*ngFor Objs/arrays</h1>
 <div class="products--grid">

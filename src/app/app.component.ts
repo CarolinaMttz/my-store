@@ -7,6 +7,7 @@ import { Product } from './product.model'
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  widthImg = 10;
   name = 'Caro';
   age = 18;
   img ="https://lumiere-a.akamaihd.net/v1/images/starwars_e58d682b.png";
