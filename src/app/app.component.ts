@@ -25,6 +25,12 @@ export class AppComponent {
 
   newUtil = '';
 
+  box = {
+    width: 100,
+    height: 100,
+    background: 'red'
+  };
+
   utilesEscolares: string[] = [
       'Dos cuadernos de cuadrícula grande de 100 hojas',
       'Un cuaderno de rayas de 100 hojas',
